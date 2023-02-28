@@ -64,8 +64,8 @@ const createFooter = () => {
       </div>
       <p class="footer-credit">cloting,best apparels online store</p>
     `;
+  var imgLogoPath = ROOT + "/img/balon.png";
   footer = footer.innerHTML.replace("#IMGLOGO", imgLogoPath);
-  imgLogoPath = ROOT + "/img/balon.png";
   console.log(imgLogoPath);
   //console.log(footer);
 };
