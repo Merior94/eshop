@@ -1,7 +1,7 @@
 const createNav = () => {
   let nav = document.querySelector(".navbar");
 
-  nav.innerHTML = `
+  let innerHTML = `
     <div class="nav">
         <img src="#IMGLOGO" class="brand-logo" alt="my logo" />
         <div class="nav-items">
@@ -25,12 +25,14 @@ const createNav = () => {
         <li class="likn-item"><a href="#" class="link">accesories</a></li>
       </ul> 
     `;
-  var imgLogoPath = ROOT + "/img/balon.png";
-  nav = nav.innerHTML.replace("#IMGLOGO", imgLogoPath);
-  console.log("Nav logo path: " + imgLogoPath);
 
-  nav = nav.innerHTML.replace("#IMGUSER", ROOT + "/img/balon2.png");
-  nav = nav.innerHTML.replace("#IMGCART", ROOT + "/img/balon2.png");
+  console.log(innerHTML);
+  innerHTML = innerHTML.replace("#IMGLOGO", ROOT + "/img/balon.png");
+  innerHTML = innerHTML.replace("#IMGUSER", ROOT + "/img/balon2.png");
+  innerHTML = innerHTML.replace("#IMGCART", ROOT + "/img/balon2.png");
+  console.log(innerHTML);
+  nav.innerHTML = innerHTML;
+  console.log(nav);
 };
 
 createNav();
