@@ -3,7 +3,7 @@ const createFooter = () => {
 
   footer.innerHTML = `
     <div class="footer-content">
-        <img src="/img/balon.png" class="logo" alt="" />
+        <img src="#IMGLOGO" class="logo" alt="" />
         <div class="footer-ul-container">
           <ul class="category">
             <li class="category-title">men</li>
@@ -66,6 +66,13 @@ const createFooter = () => {
     `;
 
   console.log(window.location);
+  // footer = footer.innerHTML.replace(
+  //   "#IMGLOGO",
+  //   window.location.pathname + "img/balon.png"
+  // );
+
+  footer = footer.innerHTML.replace("#IMGLOGO", ROOT + "img/balon.png");
+  console.log(footer);
 };
 
 createFooter();
