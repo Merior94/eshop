@@ -8,7 +8,6 @@ const getRoot = () => {
       break;
     default: // set whatever you want
   }
-  console.log(window.location);
   console.log("Root: ");
   console.log(ROOT);
 };

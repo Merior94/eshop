@@ -1,7 +1,7 @@
 const createFooter = () => {
   let footer = document.querySelector("footer");
 
-  footer.innerHTML = `
+  let innerHTML = `
     <div class="footer-content">
         <img src="#IMGLOGO" class="logo" alt="" />
         <div class="footer-ul-container">
@@ -64,10 +64,9 @@ const createFooter = () => {
       </div>
       <p class="footer-credit">cloting,best apparels online store</p>
     `;
-  var imgLogoPath = ROOT + "/img/balon.png";
-  footer = footer.innerHTML.replace("#IMGLOGO", imgLogoPath);
-  console.log("Footer logo path: " + imgLogoPath);
-  //console.log(footer);
+  innerHTML = innerHTML.replace("#IMGLOGO", ROOT + "/img/balon.png");
+  footer.innerHTML = innerHTML;
+  console.log(footer);
 };
 
 createFooter();
