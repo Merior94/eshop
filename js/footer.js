@@ -64,15 +64,10 @@ const createFooter = () => {
       </div>
       <p class="footer-credit">cloting,best apparels online store</p>
     `;
-
-  console.log(window.location);
-  // footer = footer.innerHTML.replace(
-  //   "#IMGLOGO",
-  //   window.location.pathname + "img/balon.png"
-  // );
-
-  footer = footer.innerHTML.replace("#IMGLOGO", ROOT + "img/balon.png");
-  console.log(footer);
+  footer = footer.innerHTML.replace("#IMGLOGO", imgLogoPath);
+  imgLogoPath = ROOT + "/img/balon.png";
+  console.log(imgLogoPath);
+  //console.log(footer);
 };
 
 createFooter();
