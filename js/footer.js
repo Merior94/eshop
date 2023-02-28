@@ -66,7 +66,7 @@ const createFooter = () => {
     `;
   var imgLogoPath = ROOT + "/img/balon.png";
   footer = footer.innerHTML.replace("#IMGLOGO", imgLogoPath);
-  console.log(imgLogoPath);
+  console.log("Footer logo path: " + imgLogoPath);
   //console.log(footer);
 };
 

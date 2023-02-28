@@ -4,7 +4,7 @@ const getRoot = () => {
       ROOT = "";
       break;
     case "merior94.github.io":
-      ROOT = "/eshop";
+      ROOT = document.location.origin + "/eshop";
       break;
     default: // set whatever you want
   }
