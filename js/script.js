@@ -10,6 +10,13 @@ function createItemCard(data) {
   element.querySelector(".product-brand").textContent = data.brand;
   element.querySelector(".product-short-desc").textContent = data.description;
   element.querySelector(".price").textContent = "$" + data.price;
+  element.querySelector(".product-thumb").src = data.thumb;
+  //element.querySelector(".product-thumb"). = gotoProductPage();
+  element
+    .querySelector(".product-brand")
+    .addEventListener("click", gotoProductPage);
+
+  //element.getElementById("thumb").
 
   itemsContainer.appendChild(element);
 
@@ -17,11 +24,11 @@ function createItemCard(data) {
 }
 
 async function getAllItems() {
-  const response = await fetch("http://127.0.0.1:8080/v1/shop/items");
+  const response = await fetch(API + "/v1/shop/items");
   const data = await response.json();
 
   data.forEach((element) => {
-    console.log(element);
+    //console.log(element);
     createItemCard(element);
   });
 }
@@ -59,7 +66,7 @@ async function changeImg(src) {
 
 async function queryJava() {
   console.log("queryJava");
-  const response = await fetch("http://127.0.0.1:8080/v1/shop/item");
+  const response = await fetch(API + "/v1/shop/item");
   const data = await response.json();
   console.log(data);
 }

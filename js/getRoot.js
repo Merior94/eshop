@@ -12,4 +12,5 @@ const getRoot = () => {
   console.log(ROOT);
 };
 var ROOT = "";
+var API = "https://javaapi.pawliknet.synology.me";
 getRoot();
