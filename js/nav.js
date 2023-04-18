@@ -26,13 +26,13 @@ const createNav = () => {
       </ul> 
     `;
 
-  console.log(innerHTML);
+  //console.log(innerHTML);
   innerHTML = innerHTML.replace("#IMGLOGO", ROOT + "/img/balon.png");
   innerHTML = innerHTML.replace("#IMGUSER", ROOT + "/img/balon2.png");
   innerHTML = innerHTML.replace("#IMGCART", ROOT + "/img/balon2.png");
-  console.log(innerHTML);
+  //console.log(innerHTML);
   nav.innerHTML = innerHTML;
-  console.log(nav);
+  //console.log(nav);
 };
 
 createNav();
