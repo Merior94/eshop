@@ -13,7 +13,7 @@ const createNav = () => {
             />
             <button class="search-btn">search</button>
           </div>
-          <a href="#"><img src="#IMGUSER" alt="user" /></a>
+          <a href="html/signup"><img src="#IMGUSER" alt="user" /></a>
           <a href="#"><img src="#IMGCART" alt="cart" /></a>
         </div>
       </div>
