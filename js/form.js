@@ -25,7 +25,7 @@ submitBtn.addEventListener("click", () => {
   } else {
     // submit form
     loader.style.display = "block";
-    sendData("/signup", {
+    sendData("/v1/shop/signup", {
       name: name.value,
       email: email.value,
       password: password.value,
@@ -50,7 +50,7 @@ const showAlert = (msg) => {
 
 // send data function
 const sendData = (path, data) => {
-  fetch(ROOT + path, {
+  fetch(API + path, {
     method: "post",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(data),
@@ -59,6 +59,7 @@ const sendData = (path, data) => {
     .then((response) => {
       processData(response);
     });
+  console.log("Url: " + ROOT + path);
   console.log("Response: " + response);
 };
 
