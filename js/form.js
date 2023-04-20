@@ -59,9 +59,12 @@ const sendData = (path, data) => {
     .then((response) => {
       processData(response);
     });
+  console.log("Response: " + response);
 };
 
 const processData = (data) => {
+  console.log("Data: " + data);
+
   loader.style.display = null;
   if (data.alert) {
     showAlert(data.alert);
