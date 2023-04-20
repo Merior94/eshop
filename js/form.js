@@ -50,7 +50,7 @@ const showAlert = (msg) => {
 
 // send data function
 const sendData = (path, data) => {
-  fetch(path, {
+  fetch(ROOT + path, {
     method: "post",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(data),
