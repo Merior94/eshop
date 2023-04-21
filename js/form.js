@@ -9,6 +9,15 @@ const number = document.querySelector("#number");
 const tac = document.querySelector("#terms-and-cond");
 const notification = document.querySelector("#notification");
 
+const loginBtn = document.querySelector(".login-btn");
+submitBtn.addEventListener("click", () => {
+  loader.style.display = "block";
+  sendData("/v1/shop/login", {
+    email: email.value,
+    password: password.value,
+  });
+});
+
 submitBtn.addEventListener("click", () => {
   if (name.value.length < 3) {
     showAlert("name must be 3 letters long");
