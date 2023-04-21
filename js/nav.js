@@ -3,7 +3,7 @@ const createNav = () => {
 
   let innerHTML = `
     <div class="nav">
-        <a href="/index.html"><img src="#IMGLOGO" class="brand-logo" alt="my logo" /></a>
+        <a href="#HOMEPAGE"><img src="#IMGLOGO" class="brand-logo" alt="my logo" /></a>
         <div class="nav-items">
           <div class="search">
             <input
@@ -13,7 +13,7 @@ const createNav = () => {
             />
             <button class="search-btn">search</button>
           </div>
-          <a href="/html/signup.html"><img src="#IMGUSER" alt="user" /></a>
+          <a href="#SIGNUPPAGE"><img src="#IMGUSER" alt="user" /></a>
           <a href="#"><img src="#IMGCART" alt="cart" /></a>
         </div>
       </div>
@@ -27,6 +27,9 @@ const createNav = () => {
     `;
 
   //console.log(innerHTML);
+  innerHTML = innerHTML.replace("#HOMEPAGE", ROOT + "/index.html");
+  innerHTML = innerHTML.replace("#SIGNUPPAGE", ROOT + "/html/signup.html");
+
   innerHTML = innerHTML.replace("#IMGLOGO", ROOT + "/img/balon.png");
   innerHTML = innerHTML.replace("#IMGUSER", ROOT + "/img/user.png");
   innerHTML = innerHTML.replace("#IMGCART", ROOT + "/img/cart.png");
