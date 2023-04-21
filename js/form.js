@@ -59,12 +59,10 @@ const sendData = (path, data) => {
     .then((response) => {
       processData(response);
     });
-  console.log("Url: " + ROOT + path);
-  console.log("Response: " + response);
 };
 
 const processData = (data) => {
-  console.log("Data: " + data);
+  console.log("Response: " + data.json());
 
   loader.style.display = null;
   if (data.alert) {
